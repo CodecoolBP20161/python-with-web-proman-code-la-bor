@@ -6,37 +6,56 @@
 
 
 .board {
-    width: 120px;
-    height: 200px;
-    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    border: 0px solid black;
+    border-radius: 10px;
+    background-color: #6ed3cf;
+    text-align: center;
+    font-family: Verdana, Arial, Sans-Serif;
+    display: inline-block;;
+
     /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
     /*background-repeat: repeat-y;*/
     /*background-size: 120%;*/
-    background-color: blanchedalmond;
+    /*background-color: blanchedalmond;*/
 }
 
+#background{
+    margin: 10px;
+    margin-top: 60px;
+}
 
 input#title {
     width: 100px;
-    margin-top: 40px;
+    margin-top: 20px;
     display: block;
     margin-left: 8px;
+    font-family: Verdana, Arial, Sans-Serif;
 }
 
 input#button {
-    margin-top: 100px;
-    margin-left: 70px;
+    margin: 10px;
+    margin-top: 10px;
 }
 
 input#button_cancel {
-    margin-top: -45px;
-    margin-left: 8px;
+    margin: 10px;
+    margin-top: 10px;
 }
 
 input#button_create_board {
     width: 120px;
     word-wrap: break-word;
     white-space: normal;
+    color: #FFFFFF;
+   font-family: Verdana, Arial, Sans-Serif;
+}
+
+.button_create {
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    background: #6ed3cf;
 }
 
 div#alert {
