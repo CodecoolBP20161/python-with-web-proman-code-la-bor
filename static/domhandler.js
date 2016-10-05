@@ -1,7 +1,7 @@
 var DOMHandler = {
     showBoard: function(){
-        var allBoardObjects = myLocalStorage.getBoards();
 
+        var allBoardObjects = generalStorage.currentStorage.getBoards();
         document.getElementById("result").innerHTML = allBoardObjects;
     },
 

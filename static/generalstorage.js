@@ -1,23 +1,12 @@
-var myLocalStorage = function (){
-    this.saveBoard = function (){
-        prompt("save?");
-        console.log("save2?");
-    }
-    this.getBoard = function () {
-        prompt("get?");
-        console.log("get?2");
-    }
-};
+var generalStorage = {
 
-var GeneralStorage = function () {
+    currentStorage: new myLocalStorage(),
 
-    var currentStorage = myLocalStorage()
+    saveBoard: function() {
+        currentStorage.saveBoard(board);
+    },
 
-    genSaveBoard = function() {
-        currentStorage.saveBoard();
-    }
-
-    genGetBoard = function(){
+    getBoard: function() {
         currentStorage.getBoard();
     }
-}
+};
