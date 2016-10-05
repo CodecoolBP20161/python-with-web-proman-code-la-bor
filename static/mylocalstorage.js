@@ -1,6 +1,6 @@
 var myLocalStorage = {
     saveBoard: function(board) {
-        currentBoards = this.getBoards();
+        var currentBoards = this.getBoards();
         currentBoards.push(board);
         localStorage.setItem('boards', JSON.stringify(currentBoards));
     },
@@ -12,4 +12,4 @@ var myLocalStorage = {
         }
         return currentBoards;
     }
-}
+};
