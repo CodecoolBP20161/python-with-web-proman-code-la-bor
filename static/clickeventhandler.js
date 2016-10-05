@@ -9,7 +9,6 @@ var clickEventHandler = function(){
             $("#alert").remove();
             var newBoard= createNewBoard(title);
             generalStorage.currentStorage.saveBoard(newBoard);
-            DOMHandler.showBoard();
             DOMHandler.createDisplayableBoard(newBoard);
         }
     });
