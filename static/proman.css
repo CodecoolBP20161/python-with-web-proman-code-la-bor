@@ -1,0 +1,45 @@
+/*div#background {*/
+    /*margin: 10px;*/
+    /*;*/
+    /*background-image: url("../static/img/books.jpg");*/
+/*}*/
+
+
+.board {
+    width: 120px;
+    height: 200px;
+    border: 1px solid black;
+    /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
+    /*background-repeat: repeat-y;*/
+    /*background-size: 120%;*/
+    background-color: blanchedalmond;
+}
+
+
+input#title {
+    width: 100px;
+    margin-top: 40px;
+    display: block;
+    margin-left: 8px;
+}
+
+input#button {
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+input#button_cancel {
+    margin-top: -45px;
+    margin-left: 8px;
+}
+
+input#button_create_board {
+    width: 120px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+div#alert {
+    margin-top: -70px;
+    align-self: center;
+}
