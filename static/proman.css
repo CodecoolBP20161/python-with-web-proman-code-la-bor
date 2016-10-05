@@ -1,16 +1,18 @@
-/*div#background {*/
-    /*margin: 10px;*/
-    /*;*/
-    /*background-image: url("../static/img/books.jpg");*/
-/*}*/
-
+body {
+  background: url(../static/img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .board {
     width: 200px;
     height: 100px;
-    border: 0px solid black;
+    border: 1px solid black;
     border-radius: 10px;
-    background-color: #6ed3cf;
+    /*background-color: #6ed3cf;*/
+    background-color: transparent;
     text-align: center;
     font-family: Verdana, Arial, Sans-Serif;
     display: inline-block;
@@ -22,30 +24,35 @@
     /*background-color: blanchedalmond;*/
 }
 
-#background{
+.background{
     margin: 10px;
     margin-top: 60px;
 }
 
-input#title {
-    width: 100px;
+.navbar-brand {
+    font-size: 20px;
+    color: black;
+}
+
+
+input.title {
     margin-top: 20px;
     display: block;
     margin-left: 8px;
     font-family: Verdana, Arial, Sans-Serif;
 }
 
-input#button {
+input.button {
     margin: 10px;
     margin-top: 10px;
 }
 
-input#button_cancel {
+input.button_cancel {
     margin: 10px;
     margin-top: 10px;
 }
 
-input#button_create_board {
+input.button_create_board {
     width: 120px;
     margin-top: 20px;
     margin-left: 8px;
@@ -61,7 +68,7 @@ input#button_create_board {
     background: #6ed3cf;
 }
 
-div#alert {
+div.alert {
     margin-top: -70px;
     align-self: center;
 }
