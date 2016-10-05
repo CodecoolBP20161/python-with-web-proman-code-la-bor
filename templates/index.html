@@ -15,12 +15,25 @@
         <script type="text/javascript" src="static/generalstorage.js">
         </script>
     </head>
-    <body>
+    <nav class="navbar navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">CodeLaBor</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container">
+        </div>
+
+    <body background="../static/img/bg.jpg">
         <div id="background">
             <div class="board">
                 <div id="board_create" class=".col-sm-2">
                     <input name="title" id="title" placeholder="Title">
-                    <input id="button" type="button" class="btn btn-info btn-xs" value="Save">
+                    <input id="button" type="button" class="btn btn-info btn-xs col-lg-4" value="Save">
                     <input id="button_cancel" type="button" class="btn btn-danger btn-xs" value="Cancel">
                     <div id="alert"></div>
                 </div>
