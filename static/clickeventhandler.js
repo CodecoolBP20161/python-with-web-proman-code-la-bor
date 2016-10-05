@@ -1,9 +1,13 @@
 var clickEventHandler = function(){
     $("#button").click(function() {
-        // var title = document.getElementById("title").value;
         var title = $("input[name=title]").val();
-        var newBoard= createNewBoard(title);
-        myLocalStorage.saveBoard(newBoard);
-        DOMHandler.showBoard();
+        if (title == "") {
+            $("#alert").append("Please add a title");
+        } else {
+            $("#alert").remove()
+            var newBoard= createNewBoard(title);
+            myLocalStorage.saveBoard(newBoard);
+            DOMHandler.showBoard(newBoard);
+        }
     })
 };
