@@ -7,7 +7,8 @@ var clickEventHandler = function(){
             $("#alert").remove()
             var newBoard= createNewBoard(title);
             myLocalStorage.saveBoard(newBoard);
-            DOMHandler.showBoard(newBoard);
+            DOMHandler.showBoard();
+            DOMHandler.createDisplayableBoard(newBoard);
         }
     })
 };
