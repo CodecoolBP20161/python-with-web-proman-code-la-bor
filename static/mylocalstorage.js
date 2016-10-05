@@ -1,16 +1,15 @@
 var myLocalStorage = {
     saveBoard: function(board) {
-        localStorage.setItem(board.board_id, JSON.stringify(board));
+        currentBoards = this.getBoards();
+        currentBoards.push(board);
+        localStorage.setItem('boards', JSON.stringify(currentBoards));
     },
-
+    
     getBoards: function() {
-        var boardList = [],
-            boardIdKeys = Object.keys(localStorage),
-            allBoards = boardIdKeys.length;
-
-        while ( allBoards-- ) {
-            boardList.push(localStorage.getItem(boardIdKeys[allBoards]));
+        var currentBoards = JSON.parse(localStorage.getItem('boards'));
+        if(currentBoards == null){
+            currentBoards = [];
         }
-        return boardList;
+        return currentBoards;
     }
 }
