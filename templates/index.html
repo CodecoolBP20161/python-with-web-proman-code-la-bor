@@ -1,40 +1,61 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>Proman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/proman.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+        <!--genSaveBoard( );-->
         <script type="text/javascript" src="static/generalstorage.js">
-        genSaveBoard( );
         </script>
+
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">CodeLaBor</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+
     </head>
     <body>
-            <div id="board">
-                <input name="title" id="title" placeholder="Title">
-                <!-- <div class= "btn btn-info" id="button">Add!</div> -->
-                <input id="button" type="button" class="btn btn-info" value="Submit Button">
-            </div><div id="alert"></div>
-
-        <div id="result"></div>
-
-        <div class="container">
-        	<div class="row">
-        		<div class='list-group gallery'>
-                    <div class="boardBox"></div>
+        <div id="background">
+            <div class="board">
+                <div id="board_create" class=".col-sm-2">
+                    <input name="title" id="title" placeholder="Title">
+                    <input id="button" type="button" class="btn btn-info btn-xs col-lg-4" value="Save">
+                    <input id="button_cancel" type="button" class="btn btn-danger btn-xs" value="Cancel">
+                    <div id="alert"></div>
+                </div>
+                <div id="def_board" >
+                    <input id="button_create_board" class="btn btn-primary btn-xs" value="Create new board">
                 </div>
             </div>
         </div>
+                <div id="result"></div>
 
-        <script src = "static/mylocalstorage.js"></script>
-        <script src = "static/board.js"></script>
-        <script src = "static/domhandler.js"></script>
-        <script src = "static/clickeventhandler.js"></script>
-        <script src = "static/main.js"></script>
+            <div class="container">
+                <div class="row">
+                    <div class='list-group gallery'>
+                        <div class="boardBox"></div>
+                    </div>
+                </div>
+            </div>
 
+            <script src = "../static/mylocalstorage.js"></script>
+            <script src = "../static/board.js"></script>
+            <script src = "../static/domhandler.js"></script>
+            <script src = "../static/clickeventhandler.js"></script>
+            <script src = "../static/main.js"></script>
+            <script src = "../static/proman.js"></script>
     </body>
 </html>

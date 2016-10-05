@@ -19,5 +19,4 @@ var DOMHandler = {
         //     allTitles.push(allBoards[board].title);
         // };
     }
-
-}
+};
