@@ -13,7 +13,8 @@
     background-color: #6ed3cf;
     text-align: center;
     font-family: Verdana, Arial, Sans-Serif;
-    display: inline-block;;
+    display: inline-block;
+    padding-top: 10px;
 
     /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
     /*background-repeat: repeat-y;*/
@@ -46,10 +47,12 @@ input#button_cancel {
 
 input#button_create_board {
     width: 120px;
+    margin-top: 20px;
+    margin-left: 8px;
     word-wrap: break-word;
     white-space: normal;
     color: #FFFFFF;
-   font-family: Verdana, Arial, Sans-Serif;
+    font-family: Verdana, Arial, Sans-Serif;
 }
 
 .button_create {
