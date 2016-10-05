@@ -1,3 +1,5 @@
+// Class responsible for displaying elements on the HTML Document Object Model //
+
 var DOMHandler = {
     createDisplayableBoard(board) {
         // var $boardBox = ['<div class="col-sm-4 col-xs-6 col-md-3 col-lg-3">',
