@@ -8,13 +8,8 @@ $(document).ready(function(){
         $('#def_board').hide();
         $('#board_create').show();
     });
-    $('#button_cancel').click(function() {
+    $('#button_cancel, #button').click(function() {
         $('#board_create').hide();
         $('#def_board').show();
     });
-    $('#button').click(function() {
-        $('#board_create').hide();
-        $('#def_board').show();
-
-    })
 });
