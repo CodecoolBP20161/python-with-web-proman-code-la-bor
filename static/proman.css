@@ -37,7 +37,7 @@ body {
 
 input.title {
     margin-top: 20px;
-    display: block;
+    /*display: block;*/
     margin-left: 8px;
     font-family: Verdana, Arial, Sans-Serif;
 }
