@@ -23,6 +23,7 @@ body {
     font-size: 115%;
     display: inline-block;
     padding-top: 10px;
+    word-wrap: break-word;
 
     /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
     /*background-repeat: repeat-y;*/
