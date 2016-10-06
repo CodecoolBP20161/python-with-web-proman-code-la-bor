@@ -11,5 +11,10 @@ $(document).ready(function(){
     $('#button_cancel').click(function() {
         $('#board_create').hide();
         $('#def_board').show();
+    });
+    $('#button').click(function() {
+        $('#board_create').hide();
+        $('#def_board').show();
+
     })
 });
