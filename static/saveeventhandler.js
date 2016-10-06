@@ -6,6 +6,7 @@ var saveEventHandler = function(){
            $("#alert").append("Please add a title");
        } else {
            $("#alert").remove();
+           $('.title').val('');
            var newBoard= createNewBoard(title);
            generalStorage.currentStorage.saveBoard(newBoard);
            DOMHandler.createDisplayableBoard(newBoard);
