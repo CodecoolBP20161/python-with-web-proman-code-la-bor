@@ -1,11 +1,11 @@
+// Class responsible for handling click events //
+
 var clickEventHandler = function(){
    $("#button").click(function() {
-       var title = $("input[name=title]").val();
+       var title = $("input[name=new_board_title]").val();
        if (title === "") {
            $("#alert").append("Please add a title");
-       }
-       else
-       {
+       } else {
            $("#alert").remove();
            var newBoard= createNewBoard(title);
            generalStorage.currentStorage.saveBoard(newBoard);
