@@ -7,10 +7,11 @@ body {
 }
 
 .board {
-    width: 200px;
-    max-height: auto;
-    min-height: 100px;
+
     size: auto;
+    min-height: 100px;
+    min-width: 200px;
+    max-width: 200px;
     border: 2px solid lightblue;
     border-radius: 10px;
     /*background-color: #1BBC9B;
@@ -22,7 +23,8 @@ body {
     font-family: Verdana, Arial, Sans-Serif;
     font-size: 115%;
     display: inline-block;
-    padding-top: 10px;
+    padding: 10px;
+    word-wrap: break-word;
 
     /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
     /*background-repeat: repeat-y;*/
@@ -45,21 +47,22 @@ body {
     margin-top: 20px;
     background-color: rgba(0,0,0,0.5);
     /*display: block;*/
-    margin-left: 8px;
+    margin-left: 0px;
+    width: 150px;
     font-family: Verdana, Arial, Sans-Serif;
 }
 
-input.button {
+.button {
     margin: 10px;
     margin-top: 10px;
 }
 
-input.button_cancel {
+.button_cancel {
     margin: 10px;
     margin-top: 10px;
 }
 
-input.button_create_board {
+.button_create_board {
     width: 120px;
     margin-top: 20px;
     margin-left: 8px;
