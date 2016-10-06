@@ -1,5 +1,7 @@
-// dom handling stuff (document...)
+// Main page handler //
+
 $(document).ready(function(){
+    DOMHandler.showAllBoards();
     clickEventHandler();
      $('#board_create').hide();
     $('#button_create_board').click(function() {
