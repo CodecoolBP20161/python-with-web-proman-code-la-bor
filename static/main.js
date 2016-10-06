@@ -10,6 +10,8 @@ $(document).ready(function(){
     $('#title').keydown(function(key){
         if(key.which == 13){
             saveEventHandler();
+            $('#board_create').hide();
+            $('#def_board').show();
          }
     });
 
