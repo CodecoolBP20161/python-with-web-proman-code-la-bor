@@ -1,5 +1,12 @@
 // Main page handler //
 
+// show-hide function for "Create new board field" and "Saving/cancelling field"
+var showCreateBoard= function() {
+    $('#board_create').hide();
+    $('#def_board').show();
+};
+
+
 $(document).ready(function(){
     DOMHandler.showAllBoards();
 
@@ -10,8 +17,6 @@ $(document).ready(function(){
     $('#title').keydown(function(key){
         if(key.which == 13){
             saveEventHandler();
-            $('#board_create').hide();
-            $('#def_board').show();
          }
     });
 
@@ -22,9 +27,8 @@ $(document).ready(function(){
         $('#board_create').show();
     });
 
-    // Show-hide logic for "Save" and "Cancel" buttons
-    $('#button_cancel, #save-new-board-button').click(function() {
-        $('#board_create').hide();
-        $('#def_board').show();
+    // Show-hide logic for "Cancel" buttons
+    $('#button_cancel').click(function() {
+        showCreateBoard();
     });
 });
