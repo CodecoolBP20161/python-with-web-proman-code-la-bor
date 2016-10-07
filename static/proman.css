@@ -1,0 +1,83 @@
+body {
+  background: url(../static/img/cityscape.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.board {
+
+    size: auto;
+    min-height: 100px;
+    min-width: 200px;
+    max-width: 200px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    background-color: rgba(10,10,15,0.5);
+    /*background-color: #6ed3cf;*/
+    text-align: center;
+    color: rgb(245,255,250);
+    font-family: Verdana, Arial, Sans-Serif;
+    font-size: 115%;
+    display: inline-block;
+    padding: 10px;
+    word-wrap: break-word;
+
+    /*background-image: url("https://scontent-mrs1-1.xx.fbcdn.net/v/t1.0-9/14520495_1856192424611650_210446735915454290_n.jpg?oh=54b5416fb052bf9c66e4c2f4b278a2a0&oe=58722FF6");*/
+    /*background-repeat: repeat-y;*/
+    /*background-size: 120%;*/
+    /*background-color: blanchedalmond;*/
+}
+
+.background{
+    margin: 10px;
+    margin-top: 60px;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    color: black;
+}
+
+
+.title {
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.5);
+    /*display: block;*/
+    margin-left: 0px;
+    width: 150px;
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+.button {
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.button_cancel {
+    margin: 10px;
+    margin-top: 10px;
+}
+
+.button_create_board {
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 8px;
+    word-wrap: break-word;
+    white-space: normal;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+.button_create {
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+    background: #6ed3cf;
+}
+
+.alert {
+    margin-top: -110px;
+    margin-left: px;
+    align-self: center;
+}
