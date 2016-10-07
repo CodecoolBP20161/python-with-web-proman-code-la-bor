@@ -2,13 +2,14 @@
 
 var saveEventHandler = function(){
        var title = $("input[name=new_board_title]").val();
-       if (title === "") {
-           $("#alert").append("Please add a title");
+       if (title.length === 0) {
+           $("#alert").html('Please add a title');
        } else {
-           $("#alert").remove();
-           $('.title').val('');
+           $('#alert').html("");
+           $('#title').val('');
            var newBoard= createNewBoard(title);
            generalStorage.currentStorage.saveBoard(newBoard);
            DOMHandler.createDisplayableBoard(newBoard);
+           showCreateBoard();
        }
-   };
+};
