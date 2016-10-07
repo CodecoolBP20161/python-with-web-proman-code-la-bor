@@ -1,3 +1,5 @@
+// State pattern for implementing storage //
+
 var generalStorage = {
 
     currentStorage: new myLocalStorage(),
