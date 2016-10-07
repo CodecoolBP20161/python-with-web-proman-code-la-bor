@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Proman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/proman.css">
+        <link rel="shortcut icon" type="image/png" href="../static/img/P.jpg"
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Trello alter ego by CodeLaBor</a>
+                </div>
+            </div>
+        </nav>
+    </head>
+    <body>
+        <div id="background" class="background">
+            <div class="board">
+                <div id="board_create" class=".col-sm-2 board_create">
+                    <input name="new_board_title" id="title" class="title" placeholder="Title">
+                    <input id="save-new-board-button" type="button" class="btn btn-info btn-xs col-lg-4 button" value="Save">
+                    <input id="button_cancel" type="button" class="btn btn-danger btn-xs button_cancel" value="Cancel">
+                    <div id="alert" class="alert"></div>
+                </div>
+                <div id="def_board" class="def_board">
+                    <input id="button_create_board" class="btn btn-warning btn-xs button_create_board" value="Create new board">
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="row">
+                    <div class='list-group gallery'>
+                        <div class="boardBox"></div>
+                    </div>
+                </div>
+            </div>
+
+            <script src = "../static/mylocalstorage.js"></script>
+            <script src = "../static/generalstorage.js"></script>
+            <script src = "../static/board.js"></script>
+            <script src = "../static/domhandler.js"></script>
+            <script src = "../static/saveeventhandler.js"></script>
+            <script src = "../static/main.js"></script>
+    </body>
+</html>
