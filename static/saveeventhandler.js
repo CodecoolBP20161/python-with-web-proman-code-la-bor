@@ -10,6 +10,6 @@ var saveEventHandler = function(){
            var newBoard= createNewBoard(title);
            generalStorage.currentStorage.saveBoard(newBoard);
            DOMHandler.createDisplayableBoard(newBoard);
-           showCreateBoard();
+           DOMHandler.showCreateBoardField();
        }
 };
