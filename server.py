@@ -1,5 +1,7 @@
 from flask import *
 from model import *
+from peewee import *
+from playhouse.shortcuts import dict_to_model, model_to_dict
 
 app = Flask(__name__)
 
@@ -16,6 +18,15 @@ def _db_connect():
 @app.route('/')
 def start():
     return render_template('index.html')
+
+
+@app.route('/api/boards', methods=['POST'])
+def save_board():
+    for element in request.form:
+        board_json = json.loads(element)
+    board_model = dict_to_model(Board, board_json)
+    board_model.save()
+    return "lyeah"
 
 
 if __name__ == "__main__":
