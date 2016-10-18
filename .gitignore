@@ -134,3 +134,6 @@ crashlytics-build.properties
 fabric.properties
 
 *.idea
+
+# Config file
+connect_str.json
