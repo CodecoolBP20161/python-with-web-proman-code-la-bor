@@ -1,17 +1,18 @@
 from peewee import *
+import json
+
 
 class ConnectDatabase:
+    def get_connect_string():
+        with open("connect_str.json") as config:
+            data = json.load(config)
+            db_name = data["database"]
+            return db_name
 
-    def connect_database():
-        with open('connect_str.txt', "r") as f:
-            return f.readline().strip()
-
-    connect_str = connect_database()
-    db = PostgresqlDatabase(connect_str)
+    db = PostgresqlDatabase(get_connect_string())
 
 
 class BaseModel(Model):
-
     class Meta:
         database = ConnectDatabase.db
 
