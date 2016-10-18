@@ -1,11 +1,11 @@
-class APIHandler{
+function APIHandler (){
 
 
-    saveBoard() {
+    this.saveBoard = function() {
 
     }
 
-    getBoards() {
+    this.getBoards = function() {
 
     }
 
