@@ -1,0 +1,12 @@
+class APIHandler{
+
+
+    saveBoard() {
+
+    }
+
+    getBoards() {
+
+    }
+
+}
