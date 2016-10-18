@@ -17,6 +17,6 @@ class BaseModel(Model):
         database = ConnectDatabase.db
 
 
-class BoardData(BaseModel):
-    board_title = CharField()
+class Board(BaseModel):
+    title = CharField()
     board_id = CharField()
