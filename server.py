@@ -2,6 +2,7 @@ from flask import *
 from model import *
 from peewee import *
 from playhouse.shortcuts import dict_to_model, model_to_dict
+import json
 
 app = Flask(__name__)
 
@@ -26,7 +27,14 @@ def save_board():
         board_json = json.loads(element)
     board_model = dict_to_model(Board, board_json)
     board_model.save()
-    return "lyeah"
+    return "a board has been saved"
+
+
+@app.route('/api/boards', methods=['GET'])
+def get_boards_from_database():
+    boards = Board.select()
+    board_list = [model_to_dict(board) for board in boards]
+    return json.dumps(board_list)
 
 
 if __name__ == "__main__":
