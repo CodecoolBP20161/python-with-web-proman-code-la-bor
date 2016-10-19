@@ -13,11 +13,12 @@ var DOMHandler = {
 
     // method to display all the boards
     showAllBoards() {
-        allBoards = generalStorage.currentStorage.getBoards();
-        for(board in allBoards){
-            var title = allBoards[board].title;
-            this.createDisplayableBoard(allBoards[board], title);
-            }
+        generalStorage.currentStorage.getBoards();
+        // allBoards_J = JSON.parse(allBoards);
+        // allBoards_J.forEach(function(element) {
+        //     var title = element.title;
+        //     DOMHandler.createDisplayableBoard(element, title);
+        // })
         },
 
     // show-hide function for "Create new board field" and "Saving/cancelling field"
