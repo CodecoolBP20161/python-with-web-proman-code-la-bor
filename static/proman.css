@@ -67,8 +67,42 @@ body {
     margin-top: 10px;
 }
 
-.delete-button {
-    background-color: #ccd9ff;
+.delete-button{
+    background-color: rgba(255,0,0,0.6);
+    font-size: 12px;
+}
+
+.delete-button:hover {
+    background-color: #b30000;
+}
+
+.board-button {
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-button{
+    background-color: rgba(51,51,51,0.6);
+    font-size: 14px;
+}
+
+.button_create_board {
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 8px;
+    word-wrap: break-word;
+    white-space: normal;
+    color: #FFFFFF;
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+.card-button:hover {
+    background-color: #666666;
 }
 
 .button_create_board {
