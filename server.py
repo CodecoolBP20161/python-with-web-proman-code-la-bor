@@ -13,7 +13,7 @@ def _db_connect():
     if Board.table_exists():
         pass
     else:
-        ConnectDatabase.db.create_table(Board, safe=True)
+        ConnectDatabase.db.create_table(Board, Card, safe=True)
 
 
 @app.route('/')

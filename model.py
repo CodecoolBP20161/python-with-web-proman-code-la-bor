@@ -20,3 +20,8 @@ class BaseModel(Model):
 class Board(BaseModel):
     title = CharField()
     board_id = CharField()
+
+
+class Card(BaseModel):
+    description = CharField()
+    board = ForeignKeyField(Board, related_name='board')
