@@ -12,7 +12,8 @@ var DOMHandler = {
                          title,
                          '</div>',
                          '<input type="button" class="card-button" value="Cards" data-toggle="modal" data-target="#cardsModal"',
-                         'data-whatever="' + title + '">',
+                         'data-whatever="' + title + '"',
+                         'data-board-id="' + board.board_id + '">',
                          '</div>'];
 
         $('.boardBox').append($boardBox.join(''));
@@ -43,7 +44,6 @@ var DOMHandler = {
     showCardModal: function() {
         $('#cardsModal').on('show.bs.modal', function( event ) {
             var boardName = $(event.relatedTarget).data('whatever');
-            console.log($(event.relatedTarget));
             $(this).find('.modal-title').text("Cards for " + boardName);
         });
     },
