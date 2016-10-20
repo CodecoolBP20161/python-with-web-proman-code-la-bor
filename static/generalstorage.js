@@ -10,5 +10,9 @@ var generalStorage = {
 
     getBoard: function() {
         currentStorage.getBoard();
+    },
+
+    saveCard: function() {
+        currentStorage.saveCard(card);
     }
 };
