@@ -39,13 +39,24 @@ var DOMHandler = {
         $('#board_create').show();
     },
 
-    // modal button
+    // modal for cards
     showCardModal: function() {
         $('#cardsModal').on('show.bs.modal', function( event ) {
             var boardName = $(event.relatedTarget).data('whatever');
-            // ajax here
+            console.log($(event.relatedTarget));
             $(this).find('.modal-title').text("Cards for " + boardName);
         });
     },
 
+    //
+
+    // logic for displaying one card
+    createDisplayableCard: function(card) {
+        $cardItem = ['<div class="item  col-xs-4 col-lg-4">',
+                     '<div class = "card">',
+                     card.description,
+                     '</div>'];
+
+        $('.card-item').append($cardItem.join(''));
+    }
 };
