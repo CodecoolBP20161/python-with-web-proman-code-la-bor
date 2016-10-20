@@ -9,11 +9,11 @@ $(document).ready(function(){
 
     // Save board with pressing "Save" button or hitting Enter //
     $("#save-new-board-button").click(function() {
-        saveEventHandler();
+        saveEventHandler('board');
     });
     $('#title').keydown(function(key){
         if(key.which == 13){
-            saveEventHandler();
+            saveEventHandler('board');
          }
     });
 
@@ -26,4 +26,15 @@ $(document).ready(function(){
     $('#button_cancel').click(function() {
         DOMHandler.showCreateBoardField();
     });
+
+    $('#create-card-button').click(function() {
+        saveEventHandler('card');
+    });
+
+    $('#create-card-button').keydown(function(key){
+        if(key.which == 13){
+            saveEventHandler('board');
+         }
+    });
+
 });
