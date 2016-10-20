@@ -27,13 +27,14 @@ $(document).ready(function(){
         DOMHandler.showCreateBoardField();
     });
 
+    // Save card with pressing "Save" button or hitting Enter //
     $('#create-card-button').click(function() {
         saveEventHandler('card');
     });
 
     $('#create-card-button').keydown(function(key){
         if(key.which == 13){
-            saveEventHandler('board');
+            saveEventHandler('card');
          }
     });
 
