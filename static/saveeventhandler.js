@@ -22,10 +22,10 @@ var saveEventHandler = function(item){
         } else {
             $("#missing-description-alert").html("");
             $("#card-description").val("");
-            var newCard = createNewCard(description);
+            var boardId = $(".card-button").data('board-id');
+            var newCard = new Card(description, boardId);
             generalStorage.currentStorage.saveCard(newCard);
             DOMHandler.createDisplayableCard(newCard);
+            }
         }
-
-    }
 };
