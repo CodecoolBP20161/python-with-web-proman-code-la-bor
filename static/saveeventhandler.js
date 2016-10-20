@@ -21,7 +21,7 @@ var saveEventHandler = function(item){
             $("#missing-description-alert").html('Please add a title');
         } else {
             $("#missing-description-alert").html("");
-            $("#description").val("");
+            $("#card-description").val("");
             var newCard = createNewCard(description);
             generalStorage.currentStorage.saveCard(newCard);
             DOMHandler.createDisplayableCard(newCard);
