@@ -3,6 +3,7 @@
 $(document).ready(function(){
     DOMHandler.showAllBoards();
     DOMHandler.showCardModal();
+    deleteBoard();
 
     // Hiding the field responsible for "Saving/Cancelling"
     $('#board_create').hide();
@@ -26,7 +27,7 @@ $(document).ready(function(){
     $('#button_cancel').click(function() {
         DOMHandler.showCreateBoardField();
     });
-
+    
     // Save card with pressing "Save" button or hitting Enter //
     $('#create-card-button').click(function() {
         saveEventHandler('card');
@@ -39,3 +40,12 @@ $(document).ready(function(){
     });
 
 });
+
+//Delete board logic, when click on the delete button
+var deleteBoard = function() {
+    $('.delete-button').on('click', function (event) {
+        var board = $(event.target).parent();
+        DOMHandler.deleteBoard(board.data('board-id'));
+        board.remove()
+    });
+};
