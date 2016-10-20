@@ -16,7 +16,7 @@ var generalStorage = {
         currentStorage.saveCard(card);
     },
     
-    deleteBoard: function() {
+    deleteBoard: function(board) {
         currentStorage.deleteBoard();
     }
 };

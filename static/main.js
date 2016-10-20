@@ -41,6 +41,7 @@ $(document).ready(function(){
 
 });
 
+
 //Delete board logic, when click on the delete button
 var deleteBoard = function() {
     $('.delete-button').on('click', function (event) {
