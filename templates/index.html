@@ -21,6 +21,7 @@
         <script src = "../static/mylocalstorage.js"></script>
         <script src = "../static/generalstorage.js"></script>
         <script src = "../static/board.js"></script>
+        <script src = "../static/card.js"></script>
         <script src = "../static/domhandler.js"></script>
         <script src = "../static/saveeventhandler.js"></script>
         <script src = "../static/main.js"></script>
@@ -61,10 +62,8 @@
 
         <!-- Place for board items -->
             <div class="container">
-                <div class="row">
-                    <div class="list-group gallery">
+                <div class="row list-group gallery">
                         <div class="boardBox"></div>
-                    </div>
                 </div>
             </div>
 
@@ -80,19 +79,18 @@
                   <div class="modal-body">
 
                       <div class="create-card">
-                          <input placeholder="Add new card">
+                          <input name="card-description" placeholder="Add new card">
                           <input type="button" id="create-card-button" class="btn btn-warning btn-xs create-card-button" value="Save">
+                          <div id="missing-description-alert"></div>
                       </div>
 
                   <!-- Place for card items -->
                       <div class="card-container">
-                          <div class="row list-group">
-                              <div class="item  col-xs-4 col-lg-4">
+                          <div class="row list-group gallery">
                                   <div class="card-item"></div>
-                              </div>
                           </div>
                       </div>
-                      
+
                   </div> <!-- modal-body -->
 
                   <div class="modal-footer">
