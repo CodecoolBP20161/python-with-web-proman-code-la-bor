@@ -37,13 +37,15 @@ var DOMHandler = {
     hideCreateBoardField: function() {
         $('#def_board').hide();
         $('#board_create').show();
-    }
+    },
 
-    // // modal button
-    // $(".card-button").click(function( event )) {
-    // // $('#cardsModal').on('show.bs.modal', function( event ) {
-    //     var boardName = $(event.relatedTarget).data('whatever');
-    //     // ajax here
-    //     $(this).find('.modal-title').text("Resident(s) of " + boardName);
-    // });
+    // modal button
+    showCardModal: function() {
+        $('#cardsModal').on('show.bs.modal', function( event ) {
+            var boardName = $(event.relatedTarget).data('whatever');
+            // ajax here
+            $(this).find('.modal-title').text("Cards for " + boardName);
+        });
+    },
+
 };
