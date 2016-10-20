@@ -6,8 +6,9 @@ var DOMHandler = {
     createDisplayableBoard: function(board, title) {
         var title = board.title;
         var $boardBox = ['<div class="col-sm-4 col-xs-6 col-md-3 col-lg-3">',
-                         '<div class = "board">', title, '</div>'];
-
+                         '<div class = "board">', title, '</div>']
+                        //  '<button type="button" data-toggle="modal" data-target="#cardsModal"',
+                        //  'data-whatever="' + title + '"></button>'];
         $('.boardBox').append($boardBox.join(''));
     },
 
@@ -32,4 +33,10 @@ var DOMHandler = {
         $('#board_create').show();
     }
 
+    // // modal button
+    // $('#cardsModal').on('show.bs.modal', function( event ) {
+    //     var boardName = $(event.relatedTarget).data('whatever');
+    //     // ajax here
+    //     $(this).find('.modal-title').text("Resident(s) of " + boardName);
+    // });
 };
