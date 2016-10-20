@@ -33,12 +33,11 @@ $(document).ready(function(){
         saveEventHandler('card');
     });
 
-    $('#create-card-button').keydown(function(key){
+    $('#card-description').keydown(function(key){
         if(key.which == 13){
             saveEventHandler('card');
          }
     });
-
 });
 
 
@@ -47,6 +46,7 @@ var deleteBoard = function() {
     $('.delete-button').on('click', function (event) {
         var board = $(event.target).parent();
         DOMHandler.deleteBoard(board.data('board-id'));
-        board.remove()
+        board.remove();
+        // document.location.reload()
     });
 };
