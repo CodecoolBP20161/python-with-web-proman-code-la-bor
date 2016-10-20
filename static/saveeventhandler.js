@@ -16,7 +16,7 @@ var saveEventHandler = function(item){
         }
 
     } else {
-        var description = $("input[name="card-description"").val();
+        var description = $("input[name=card-description]").val();
         if (description.length === 0) {
             $("#missing-description-alert").html('Please add a title');
         } else {
