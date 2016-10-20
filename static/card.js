@@ -1,9 +1,5 @@
 // Constructor class for Card objects
-var Card = function(description) {
+var Card = function(description, board_id) {
     this.description = description;
-};
-
-var createNewCard = function(description){
-    var newCard = new Card(description);
-    return newCard;
+    this.board_id = board_id;
 };

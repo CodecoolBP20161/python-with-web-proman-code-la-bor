@@ -7,12 +7,14 @@ var DOMHandler = {
         var title = board.title;
         var $boardBox = ['<div class="col-sm-4 col-xs-6 col-md-3 col-lg-3">',
                          '<div class = "board">',
-                         '<input type="button" class="delete-button" value="X">',
+                         '<input type="button" class="board-button delete-button" value="X">',
                          '<div>',
                          title,
                          '</div>',
                          '<input type="button" class="card-button" value="Cards" data-toggle="modal" data-target="#cardsModal"',
-                         'data-whatever="' + title + '">',
+                         'data-whatever="' + title + '"',
+                         'data-board-id="' + board.board_id + '">',
+
                          '</div>'];
 
         $('.boardBox').append($boardBox.join(''));
@@ -43,7 +45,6 @@ var DOMHandler = {
     showCardModal: function() {
         $('#cardsModal').on('show.bs.modal', function( event ) {
             var boardName = $(event.relatedTarget).data('whatever');
-            console.log($(event.relatedTarget));
             $(this).find('.modal-title').text("Cards for " + boardName);
         });
     },
