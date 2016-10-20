@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
     DOMHandler.showAllBoards();
+    DOMHandler.showCardModal();
 
     // Hiding the field responsible for "Saving/Cancelling"
     $('#board_create').hide();
