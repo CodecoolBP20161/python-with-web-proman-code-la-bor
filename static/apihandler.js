@@ -16,6 +16,15 @@ function APIHandler (){
             async: false,
         })
         return allBoards.responseText;
+    },
+
+    this.saveCard = function(card) {
+        $.ajax({
+            url: '/api/' + card.board_id + '/cards',
+            method: 'PUT',
+            dataType: 'json',
+            data: JSON.stringify(card)
+        });
     }
 
 }
