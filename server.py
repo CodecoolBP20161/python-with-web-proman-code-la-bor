@@ -37,5 +37,12 @@ def get_boards_from_database():
     return json.dumps(board_list)
 
 
+@app.route('/api/boards/<board_id>', methods=['DELETE'])
+def delete_board(board_id):
+    board = Board.delete().where(Board.board_id == board_id)
+    board.execute()
+    return 'the board has been deleted'
+
+
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
