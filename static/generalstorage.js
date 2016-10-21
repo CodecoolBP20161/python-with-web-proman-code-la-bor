@@ -2,7 +2,7 @@
 
 var generalStorage = {
 
-    currentStorage: new myLocalStorage(),
+    currentStorage: new APIHandler(),
 
     saveBoard: function() {
         currentStorage.saveBoard(board);
