@@ -2,17 +2,19 @@
 
 $(document).ready(function(){
     DOMHandler.showAllBoards();
+    DOMHandler.showCardModal();
+    DOMHandler.deleteBoard();
 
     // Hiding the field responsible for "Saving/Cancelling"
     $('#board_create').hide();
 
     // Save board with pressing "Save" button or hitting Enter //
     $("#save-new-board-button").click(function() {
-        saveEventHandler();
+        saveEventHandler('board');
     });
     $('#title').keydown(function(key){
         if(key.which == 13){
-            saveEventHandler();
+            saveEventHandler('board');
          }
     });
 
@@ -24,5 +26,16 @@ $(document).ready(function(){
     // Show-hide logic for "Cancel" buttons
     $('#button_cancel').click(function() {
         DOMHandler.showCreateBoardField();
+    });
+
+    // Save card with pressing "Save" button or hitting Enter //
+    $('#create-card-button').click(function() {
+        saveEventHandler('card');
+    });
+
+    $('#card-description').keydown(function(key){
+        if(key.which == 13){
+            saveEventHandler('card');
+         }
     });
 });

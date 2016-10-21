@@ -8,7 +8,19 @@ var generalStorage = {
         currentStorage.saveBoard(board);
     },
 
-    getBoard: function() {
-        currentStorage.getBoard();
+    getBoards: function() {
+        currentStorage.getBoards();
+    },
+
+    deleteBoard: function(board) {
+        currentStorage.deleteBoard();
+    },
+    
+    saveCard: function() {
+        currentStorage.saveCard(card);
+    },
+
+    getCards: function() {
+        currentStorage.getCards();
     }
 };
