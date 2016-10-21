@@ -44,20 +44,25 @@ def delete_board(board_id):
     return 'the board has been deleted'
 
 
-# @app.route('/api/<board_id>/cards', methods=['PUT'])
-# def save_card(board_id):
-#     for card in request.form:
-#         card_json = json.loads(card)
-#     # card_model = dict_to_model(Card, card_json)
-#     # card_model.save()
-#     return "a card has been saved"
+@app.route('/api/<board_id>/cards', methods=['PUT'])
+def save_card(board_id):
+    for card in request.form:
+        card_json = json.loads(card)
+        board_id = card_json['board_id']
+    board_for_cards = Board.select().where(board_id == Board.board_id)
+    new_card = Card.create(
+                        description=card_json['description'],
+                        board=board_for_cards,
+                        )
+    new_card.save()
+    return "a card has been saved"
 
 
-# @app.route('/api/<board_id>/cards', methods=['GET'])
-# def get_cards_from_database(board_id):
-#     cards = Card.select().where(Card.board == board_id)
-#     card_list = [model_to_dict(card) for card in cards]
-#     return json.dumps(card_list)
+@app.route('/api/<board_id>/cards', methods=['GET'])
+def get_cards_from_database():
+    cards = Card.select().where(Card.board == board_id)
+    card_list = [model_to_dict(card) for card in cards]
+    return json.dumps(card_list)
 
 
 if __name__ == "__main__":
