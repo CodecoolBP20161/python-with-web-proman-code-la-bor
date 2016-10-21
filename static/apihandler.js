@@ -7,7 +7,7 @@ function APIHandler (){
             dataType: 'json',
             data: JSON.stringify(board)
         });
-    };
+    },
 
     this.getBoards = function() {
         var allBoards = $.ajax({
@@ -16,7 +16,15 @@ function APIHandler (){
             async: false
         });
         return allBoards.responseText;
-    };
+    },
+
+    this.deleteBoard = function(board_id) {
+        $.ajax({
+            url: '/api/boards/' + board_id,
+            type: "DELETE",
+            dataType: 'json'
+        });
+    },
 
     this.saveCard = function(card) {
         $.ajax({
@@ -25,13 +33,15 @@ function APIHandler (){
             dataType: 'json',
             data: JSON.stringify(card)
         });
-    };
+    },
 
-    this.deleteBoard = function(board_id) {
-        $.ajax({
-            url: '/api/boards/' + board_id,
-            type: "DELETE",
-            dataType: 'json'
+    this.getCards = function(board_id) {
+        var allCards = $.ajax({
+            url: '/api/' + board_id + '/cards',
+            method: 'GET',
+            async: false
         });
+        return allCards.responseText;
     }
-}
+
+};
