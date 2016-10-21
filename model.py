@@ -24,4 +24,4 @@ class Board(BaseModel):
 
 class Card(BaseModel):
     description = CharField()
-    board = ForeignKeyField(Board, related_name='board')
+    board = ForeignKeyField(Board, related_name='board', null=True)
