@@ -21,6 +21,7 @@
         <script src = "../static/mylocalstorage.js"></script>
         <script src = "../static/generalstorage.js"></script>
         <script src = "../static/board.js"></script>
+        <script src = "../static/card.js"></script>
         <script src = "../static/domhandler.js"></script>
         <script src = "../static/saveeventhandler.js"></script>
         <script src = "../static/main.js"></script>
@@ -61,12 +62,44 @@
 
         <!-- Place for board items -->
             <div class="container">
-                <div class="row">
-                    <div class="list-group gallery">
+                <div class="row list-group gallery">
                         <div class="boardBox"></div>
-                    </div>
                 </div>
             </div>
+
+        <!-- Modal for cards -->
+            <div class="modal fade" id="cardsModal" tabindex="-1" role="dialog" aria-labelledby="cardsModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="cardsModalLabel"></h4>
+                  </div>
+
+                  <div class="modal-body">
+
+                      <div class="create-card">
+                          <input name="card-description" placeholder="Add new card" id="card-description">
+                          <input type="button" id="create-card-button" class="btn btn-warning btn-xs create-card-button" value="Save">
+                          <div id="missing-description-alert"></div>
+                      </div>
+
+                  <!-- Place for card items -->
+                      <div class="card-container">
+                          <div class="row list-group gallery">
+                                  <div class="card-item"></div>
+                          </div>
+                      </div>
+
+                  </div> <!-- modal-body -->
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div> <!-- modal-footer -->
+
+                </div> <!-- modal-content -->
+              </div>  <!-- modal-dialog -->
+            </div> <!-- modal-fade -->
 
     </body>
 </html>
