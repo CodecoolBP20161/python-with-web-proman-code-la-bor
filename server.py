@@ -39,7 +39,7 @@ def get_boards_from_database():
 
 @app.route('/api/boards/<board_id>', methods=['DELETE'])
 def delete_board(board_id):
-    board = Board.delete().where(Board.board_id == board_id)
+    board = Board.delete_instance(Board).where(Board.board_id == board_id)
     board.execute()
     return 'the board has been deleted'
 
@@ -59,7 +59,7 @@ def save_card(board_id):
 
 
 @app.route('/api/<board_id>/cards', methods=['GET'])
-def get_cards_from_database():
+def get_cards_from_database(board_id):
     cards = Card.select().where(Card.board == board_id)
     card_list = [model_to_dict(card) for card in cards]
     return json.dumps(card_list)
